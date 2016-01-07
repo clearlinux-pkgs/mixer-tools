@@ -1,0 +1,1 @@
+watchurl=https://github.com/clearlinux/mixer-tools/releases .*/v?(\d[\d.]*)\.tar\.gz
