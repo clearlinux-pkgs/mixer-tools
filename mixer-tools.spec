@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 3.03
-Release  : 39
+Release  : 40
 URL      : https://github.com/clearlinux/mixer-tools/archive/v3.03.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/archive/v3.03.tar.gz
 Summary  : No detailed summary available
