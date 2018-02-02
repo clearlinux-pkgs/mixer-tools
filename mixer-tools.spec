@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 3.2.1
-Release  : 52
+Release  : 53
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v3.2.1/mixer-tools-3.2.1.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v3.2.1/mixer-tools-3.2.1.tar.gz
 Summary  : No detailed summary available
