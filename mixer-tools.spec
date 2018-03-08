@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 4.0.2
-Release  : 65
+Release  : 66
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v4.0.2/mixer-tools-4.0.2.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v4.0.2/mixer-tools-4.0.2.tar.gz
 Summary  : No detailed summary available
