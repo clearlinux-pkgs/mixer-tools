@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 4.5.1
-Release  : 82
+Release  : 83
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v4.5.1/mixer-tools-4.5.1.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v4.5.1/mixer-tools-4.5.1.tar.gz
 Summary  : No detailed summary available
