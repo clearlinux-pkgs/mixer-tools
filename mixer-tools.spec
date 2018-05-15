@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 4.5.0
-Release  : 80
+Release  : 81
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v4.5.0/mixer-tools-4.5.0.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v4.5.0/mixer-tools-4.5.0.tar.gz
 Summary  : No detailed summary available
@@ -53,11 +53,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526343451
+export SOURCE_DATE_EPOCH=1526344911
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1526343451
+export SOURCE_DATE_EPOCH=1526344911
 rm -rf %{buildroot}
 %make_install
 
