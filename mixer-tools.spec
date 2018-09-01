@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 5.1.4
-Release  : 109
+Release  : 110
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v5.1.4/mixer-tools-5.1.4.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v5.1.4/mixer-tools-5.1.4.tar.gz
 Summary  : No detailed summary available
@@ -64,11 +64,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1535763369
+export SOURCE_DATE_EPOCH=1535763883
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1535763369
+export SOURCE_DATE_EPOCH=1535763883
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/mixer-tools
 cp COPYING %{buildroot}/usr/share/doc/mixer-tools/COPYING
