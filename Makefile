@@ -1,5 +1,5 @@
 PKG_NAME := mixer-tools
-URL = https://github.com/clearlinux/mixer-tools/releases/download/v5.1.4/mixer-tools-5.1.4.tar.gz
+URL = https://github.com/clearlinux/mixer-tools/releases/download/v5.2.0/mixer-tools-5.2.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
