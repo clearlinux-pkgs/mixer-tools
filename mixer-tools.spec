@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 5.1.4
-Release  : 119
+Release  : 120
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v5.1.4/mixer-tools-5.1.4.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v5.1.4/mixer-tools-5.1.4.tar.gz
 Summary  : No detailed summary available
