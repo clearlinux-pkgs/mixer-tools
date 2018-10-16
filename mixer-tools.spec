@@ -4,12 +4,12 @@
 #
 Name     : mixer-tools
 Version  : 5.3.0
-Release  : 125
+Release  : 126
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v5.3.0/mixer-tools-5.3.0.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v5.3.0/mixer-tools-5.3.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : <html><head><title>License Server</a></body></html> Server</title></head><body><a href="license/">License
+License  : AGPL-3.0 Apache-2.0 BSD-2-Clause BSD-3-Clause BSD-3-Clause-Clear GPL-2.0 GPL-3.0 LGPL-3.0 MIT WTFPL
 Requires: mixer-tools-bin = %{version}-%{release}
 Requires: mixer-tools-data = %{version}-%{release}
 Requires: mixer-tools-license = %{version}-%{release}
@@ -64,11 +64,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539710352
+export SOURCE_DATE_EPOCH=1539711138
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1539710352
+export SOURCE_DATE_EPOCH=1539711138
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/mixer-tools
 cp COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/COPYING
@@ -88,7 +88,6 @@ cp vendor/github.com/spf13/cobra/cobra/cmd/license_gpl_2.go %{buildroot}/usr/sha
 cp vendor/github.com/spf13/cobra/cobra/cmd/license_gpl_3.go %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_gpl_3.go
 cp vendor/github.com/spf13/cobra/cobra/cmd/license_lgpl.go %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_lgpl.go
 cp vendor/github.com/spf13/cobra/cobra/cmd/license_mit.go %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_mit.go
-cp vendor/github.com/spf13/cobra/cobra/cmd/licenses.go %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_licenses.go
 cp vendor/github.com/spf13/cobra/cobra/cmd/testdata/LICENSE.golden %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_testdata_LICENSE.golden
 cp vendor/github.com/spf13/pflag/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_pflag_LICENSE
 %make_install
@@ -127,7 +126,6 @@ cp vendor/github.com/spf13/pflag/LICENSE %{buildroot}/usr/share/package-licenses
 /usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_gpl_3.go
 /usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_lgpl.go
 /usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_license_mit.go
-/usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_licenses.go
 /usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_cobra_cobra_cmd_testdata_LICENSE.golden
 /usr/share/package-licenses/mixer-tools/vendor_github.com_spf13_pflag_LICENSE
 
