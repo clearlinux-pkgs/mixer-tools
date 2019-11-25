@@ -1,2 +1,6 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+go-github.com-cpuguy83-go-md2man
+go-github.com-mitchellh-go-homedir
+go-github.com-spf13-viper
+go-gopkg.in-yaml.v2
