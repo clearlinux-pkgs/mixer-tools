@@ -4,3 +4,8 @@ go-github.com-cpuguy83-go-md2man
 go-github.com-mitchellh-go-homedir
 go-github.com-spf13-viper
 go-gopkg.in-yaml.v2
+go-github.com-go-ini-ini
+go-github.com-olekukonko-tablewriter
+go-github.com-pkg-errors
+go-github.com-smartystreets-goconvey
+go-gopkg.in-ini.v1
