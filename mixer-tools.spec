@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 6.2.4
-Release  : 158
+Release  : 159
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Summary  : No detailed summary available
@@ -63,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1590615439
+export SOURCE_DATE_EPOCH=1595026332
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -73,8 +73,11 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1590615439
+export SOURCE_DATE_EPOCH=1595026332
 rm -rf %{buildroot}
+## install_prepend content
+export GOFLAGS="-buildmode=pie -v"
+## install_prepend end
 mkdir -p %{buildroot}/usr/share/package-licenses/mixer-tools
 cp %{_builddir}/mixer-tools-6.2.4/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/598f87f072f66e2269dd6919292b2934dbb20492
 cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/BurntSushi/toml/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/f9cab757896ef6b3570e62b2df7fb63ab1a34b80
