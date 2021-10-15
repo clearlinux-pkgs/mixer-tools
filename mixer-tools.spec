@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 6.2.4
-Release  : 176
+Release  : 177
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Summary  : No detailed summary available
@@ -15,6 +15,7 @@ Requires: mixer-tools-data = %{version}-%{release}
 Requires: mixer-tools-license = %{version}-%{release}
 Requires: mixer-tools-man = %{version}-%{release}
 BuildRequires : buildreq-golang
+Patch1: 0001-builder-Add-a-bundle-s-packages-as-the-content-to-th.patch
 
 %description
 [![Go Report Card](https://goreportcard.com/badge/github.com/clearlinux/mixer-tools)](https://goreportcard.com/report/github.com/clearlinux/mixer-tools)
@@ -57,13 +58,14 @@ man components for the mixer-tools package.
 %prep
 %setup -q -n mixer-tools-6.2.4
 cd %{_builddir}/mixer-tools-6.2.4
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595026332
+export SOURCE_DATE_EPOCH=1634321782
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -73,7 +75,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1595026332
+export SOURCE_DATE_EPOCH=1634321782
 rm -rf %{buildroot}
 ## install_prepend content
 export GOFLAGS="-buildmode=pie -v"
