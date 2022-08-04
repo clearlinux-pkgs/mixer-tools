@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 6.2.4
-Release  : 186
+Release  : 187
 URL      : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/releases/download/v6.2.4/mixer-tools-6.2.4.tar.gz
 Summary  : No detailed summary available
@@ -15,7 +15,6 @@ Requires: mixer-tools-data = %{version}-%{release}
 Requires: mixer-tools-license = %{version}-%{release}
 Requires: mixer-tools-man = %{version}-%{release}
 BuildRequires : buildreq-golang
-Patch1: 0001-builder-Add-a-bundle-s-packages-as-the-content-to-th.patch
 
 %description
 [![Go Report Card](https://goreportcard.com/badge/github.com/clearlinux/mixer-tools)](https://goreportcard.com/report/github.com/clearlinux/mixer-tools)
@@ -58,14 +57,13 @@ man components for the mixer-tools package.
 %prep
 %setup -q -n mixer-tools-6.2.4
 cd %{_builddir}/mixer-tools-6.2.4
-%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634321782
+export SOURCE_DATE_EPOCH=1659651085
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -75,21 +73,21 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1634321782
+export SOURCE_DATE_EPOCH=1659651085
 rm -rf %{buildroot}
 ## install_prepend content
 export GOFLAGS="-buildmode=pie -v"
 ## install_prepend end
 mkdir -p %{buildroot}/usr/share/package-licenses/mixer-tools
-cp %{_builddir}/mixer-tools-6.2.4/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/598f87f072f66e2269dd6919292b2934dbb20492
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/BurntSushi/toml/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/f9cab757896ef6b3570e62b2df7fb63ab1a34b80
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/go-ini/ini/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/e4ef54f2c30670f950d5e196afa09c88d8ef0c8a
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/inconshreveable/mousetrap/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/9174f93c54ad0022bbb9b445480cfb6b4217226a
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/mattn/go-runewidth/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/5ca808f075931c5322193d4afd5a3370c824f810
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/olekukonko/tablewriter/LICENSE.md %{buildroot}/usr/share/package-licenses/mixer-tools/7c15369a8295c6d2cd26b41618f5ba81e7e06eca
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/pkg/errors/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/9c1bedc0d42f24c24a1bd266f3ce101a4b0579fc
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/spf13/cobra/LICENSE.txt %{buildroot}/usr/share/package-licenses/mixer-tools/c7feacb4667f8c63c89e2eeeb9a913bd3ced8ac2
-cp %{_builddir}/mixer-tools-6.2.4/vendor/github.com/spf13/pflag/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/b3c86ae465b21f7323059db335158b48187731c7
+cp %{_builddir}/mixer-tools-%{version}/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/598f87f072f66e2269dd6919292b2934dbb20492
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/BurntSushi/toml/COPYING %{buildroot}/usr/share/package-licenses/mixer-tools/f9cab757896ef6b3570e62b2df7fb63ab1a34b80
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/go-ini/ini/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/e4ef54f2c30670f950d5e196afa09c88d8ef0c8a
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/inconshreveable/mousetrap/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/9174f93c54ad0022bbb9b445480cfb6b4217226a
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/mattn/go-runewidth/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/5ca808f075931c5322193d4afd5a3370c824f810
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/olekukonko/tablewriter/LICENSE.md %{buildroot}/usr/share/package-licenses/mixer-tools/7c15369a8295c6d2cd26b41618f5ba81e7e06eca
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/pkg/errors/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/9c1bedc0d42f24c24a1bd266f3ce101a4b0579fc
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/spf13/cobra/LICENSE.txt %{buildroot}/usr/share/package-licenses/mixer-tools/c7feacb4667f8c63c89e2eeeb9a913bd3ced8ac2
+cp %{_builddir}/mixer-tools-%{version}/vendor/github.com/spf13/pflag/LICENSE %{buildroot}/usr/share/package-licenses/mixer-tools/b3c86ae465b21f7323059db335158b48187731c7
 %make_install
 
 %files
