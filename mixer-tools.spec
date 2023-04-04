@@ -4,7 +4,7 @@
 #
 Name     : mixer-tools
 Version  : 6.2.14
-Release  : 205
+Release  : 206
 URL      : https://github.com/clearlinux/mixer-tools/archive/v6.2.14/mixer-tools-6.2.14.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/archive/v6.2.14/mixer-tools-6.2.14.tar.gz
 Summary  : No detailed summary available
