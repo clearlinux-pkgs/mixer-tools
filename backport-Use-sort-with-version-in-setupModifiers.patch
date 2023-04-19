@@ -1,0 +1,29 @@
+From 7d592323538b6eedc19d4876c761bb8a8dc05780 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Wed, 19 Apr 2023 10:02:57 -0700
+Subject: [PATCH] Use sort with version in setupModifiers
+
+The codebase uses sortFilesVersionName prior to writing out manifests
+and that should be used in setupModifiers as well.
+
+Signed-off-by: William Douglas <william.douglas@intel.com>
+---
+ swupd/manifest.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/swupd/manifest.go b/swupd/manifest.go
+index 0571550..8b0632d 100644
+--- a/swupd/manifest.go
++++ b/swupd/manifest.go
+@@ -358,7 +358,7 @@ func (m *Manifest) setupModifiers() error {
+ 			f.setFullModifier(m)
+ 		}
+ 	}
+-	m.sortFilesName()
++	m.sortFilesVersionName()
+ 	return nil
+ }
+ 
+-- 
+2.40.0
+
