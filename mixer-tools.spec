@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : mixer-tools
-Version  : 6.2.15
-Release  : 208
-URL      : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.2.15.tar.gz
-Source0  : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.2.15.tar.gz
+Version  : 6.2.16
+Release  : 209
+URL      : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.2.16.tar.gz
+Source0  : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.2.16.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT
@@ -19,7 +19,6 @@ BuildRequires : go
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-Patch1: backport-Use-sort-with-version-in-setupModifiers.patch
 
 %description
 [![Go Report Card](https://goreportcard.com/badge/github.com/clearlinux/mixer-tools)](https://goreportcard.com/report/github.com/clearlinux/mixer-tools)
@@ -60,9 +59,8 @@ man components for the mixer-tools package.
 
 
 %prep
-%setup -q -n mixer-tools-6.2.15
-cd %{_builddir}/mixer-tools-6.2.15
-%patch1 -p1
+%setup -q -n mixer-tools-6.2.16
+cd %{_builddir}/mixer-tools-6.2.16
 
 %build
 ## build_prepend content
@@ -72,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681924033
+export SOURCE_DATE_EPOCH=1681926491
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
@@ -82,7 +80,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1681924033
+export SOURCE_DATE_EPOCH=1681926491
 rm -rf %{buildroot}
 ## install_prepend content
 export GOFLAGS="-buildmode=pie -v"
