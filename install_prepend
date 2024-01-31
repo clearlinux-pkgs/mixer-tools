@@ -1,1 +1,1 @@
-export GOFLAGS="-buildmode=pie -v"
+unset CLEAR_DEBUG_TERSE
