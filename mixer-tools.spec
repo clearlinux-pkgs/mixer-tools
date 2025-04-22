@@ -7,7 +7,7 @@
 #
 Name     : mixer-tools
 Version  : 6.3.5
-Release  : 226
+Release  : 227
 URL      : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.3.5.tar.gz
 Source0  : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.3.5.tar.gz
 Summary  : No detailed summary available
