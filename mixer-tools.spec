@@ -6,10 +6,10 @@
 # autospec commit: 9594167
 #
 Name     : mixer-tools
-Version  : 6.4.0
-Release  : 228
-URL      : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.4.0.tar.gz
-Source0  : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.4.0.tar.gz
+Version  : 6.4.1
+Release  : 229
+URL      : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.4.1.tar.gz
+Source0  : https://github.com/clearlinux/mixer-tools/archive/refs/tags/v6.4.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT
@@ -61,10 +61,10 @@ man components for the mixer-tools package.
 
 
 %prep
-%setup -q -n mixer-tools-6.4.0
-cd %{_builddir}/mixer-tools-6.4.0
+%setup -q -n mixer-tools-6.4.1
+cd %{_builddir}/mixer-tools-6.4.1
 pushd ..
-cp -a mixer-tools-6.4.0 buildavx2
+cp -a mixer-tools-6.4.1 buildavx2
 popd
 
 %build
@@ -75,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1745608101
+export SOURCE_DATE_EPOCH=1746130738
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -115,7 +115,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1745608101
+export SOURCE_DATE_EPOCH=1746130738
 rm -rf %{buildroot}
 ## install_prepend content
 unset CLEAR_DEBUG_TERSE
